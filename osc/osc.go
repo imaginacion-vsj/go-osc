@@ -390,7 +390,7 @@ func NewBundle(time time.Time) *Bundle {
 func (b *Bundle) Append(pck Packet) error {
 	switch t := pck.(type) {
 	default:
-		return fmt.Errorf("unsupported OSC packet type: only Bundle and Message are supported")
+		//return fmt.Errorf("unsupported OSC packet type: only Bundle and Message are supported")
 
 	case *Bundle:
 		b.Bundles = append(b.Bundles, t)
